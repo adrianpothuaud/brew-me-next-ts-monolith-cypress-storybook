@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Complete-Checks-On-Push:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: {{secrets.DATABASE_URL}}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
