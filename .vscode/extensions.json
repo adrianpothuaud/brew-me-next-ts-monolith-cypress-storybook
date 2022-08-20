@@ -4,12 +4,11 @@
         "anseki.vscode-color",
         "editorconfig.editorconfig",
         "dbaeumer.vscode-eslint",
-        "maty.vscode-mocha-sidebar",
         "christian-kohler.npm-intellisense",
         "prisma.prisma",
         "stylelint.vscode-stylelint",
         "tabnine.tabnine-vscode",
         "wayou.vscode-todo-highlight",
-        "Gruntfuggly.todo-tree"
+        "gruntfuggly.todo-tree"
     ]
 }

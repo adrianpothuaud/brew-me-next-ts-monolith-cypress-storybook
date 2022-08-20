@@ -7,7 +7,7 @@ export default defineConfig({
       bundler: "webpack",
       framework: "next",
     },
-    specPattern: "journeys/**/components/**/*.cy.ts",
+    specPattern: "**/components/**/*.cy.tsx",
   },
   defaultCommandTimeout: 5000,
   e2e: {
@@ -16,7 +16,7 @@ export default defineConfig({
       // implement node event listeners here
     },
     slowTestThreshold: 5000,
-    specPattern: "journeys/**/acceptance/**/*.cy.ts",
+    specPattern: "**/acceptance/**/*.cy.ts",
     testIsolation: "legacy",
   },
   execTimeout: 5000,
