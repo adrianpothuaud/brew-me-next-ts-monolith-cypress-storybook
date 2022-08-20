@@ -1,1 +1,3 @@
 - https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
+- https://dev.to/kouts/deploy-storybook-to-github-pages-3bij
+- https://github.com/marketplace/actions/deploy-to-github-pages
