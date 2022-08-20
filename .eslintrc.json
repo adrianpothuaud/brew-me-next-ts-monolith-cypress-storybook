@@ -1,0 +1,86 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "node",
+    "typescript-sort-keys"
+  ],
+  "rules": {
+    "camelcase": ["error", { "ignoreDestructuring": true }],
+    "class-methods-use-this": "off",
+    "func-names": "off",
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/order": ["error", { "alphabetize": { "order": "asc" }, "groups": ["builtin", "external", "internal"], "newlines-between": "always" }],
+    "indent": ["error", 2],
+    "key-spacing": ["error", { "afterColon": true }],
+    "keyword-spacing": ["error", { "after": true }],
+    "no-console": "off",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "no-plusplus": "off",
+    "no-unused-vars": "off",
+    "object-curly-spacing": ["error", "always"],
+    "one-var-declaration-per-line": "error",
+    "prefer-arrow-callback": "off",
+    "react/jsx-indent": [2, 2, {"checkAttributes": true, "indentLogicalExpressions": true}],
+    "semi": ["error", "never"],
+    "sort-keys": "error",
+    "sort-vars": "error",
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.tsx"
+      ],
+      "extends": [
+        "next/core-web-vitals",
+        "plugin:jsx-a11y/recommended"
+      ],
+      "plugins": [
+        "jsx-a11y"
+      ],
+      "rules": {
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/jsx-sort-props": [1, {
+          "callbacksLast": true,
+          "shorthandFirst": true,
+          "shorthandLast": false,
+          "multiline": "last",
+          "ignoreCase": false,
+          "noSortAlphabetically": false,
+          "reservedFirst": true,
+          "locale": "auto"
+        }],
+        "react/no-unescaped-entities": "error"
+      }
+    },
+    {
+      "files": [
+        "**/*.stories.tsx"
+      ],
+      "extends": [
+        "plugin:storybook/recommended"
+      ],
+      "plugins": [
+      ],
+      "rules": {
+        "storybook/hierarchy-separator": "error",
+        "storybook/default-exports": "off"
+      }
+    },
+    {
+      "files": ["**/*.cy.ts"],
+      "extends": [
+      ],
+      "plugins": [
+      ],
+      "rules": {
+      }
+    }
+  ]
+}
