@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrew_me_next_ts_monolith=self.webpackChunkbrew_me_next_ts_monolith||[]).push([[745],{"./node_modules/react-dom/client.js":(__unused_webpack_module,exports,__webpack_require__)=>{var m=__webpack_require__("./node_modules/react-dom/index.js");exports.createRoot=m.createRoot,exports.hydrateRoot=m.hydrateRoot}}]);
