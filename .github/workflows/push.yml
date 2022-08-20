@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
       - name: Project information
         run: |
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event." \
