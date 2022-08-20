@@ -28,6 +28,12 @@ jobs:
         run: yarn build
       - name: Run E2E tests
         run: yarn atdd:ci
+      - name: Build Storybook
+        run: yarn build-storybook
+      - name: Deploy Storybook as GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
       - name: Deploy production application to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
