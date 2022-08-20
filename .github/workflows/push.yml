@@ -8,7 +8,6 @@ env:
 jobs:
   Complete-Checks-On-Push:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.13.0-chrome78-ff70
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -38,15 +37,7 @@ jobs:
       - name: Build Next.js application
         run: yarn build
       - name: Run E2E tests
-        uses: cypress-io/github-action@v4
-        with:
-          browser: chrome
-          component: false
-          record: true
-          start: yarn start
-        env:
-          CYPRESS_RECORD_KEY: 6f9537cd-1419-422a-9a3a-7543c57dbe0d
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn atdd:ci
       - name: Build Storybook
         run: yarn build-storybook
       - name: Deploy Storybook as GitHub Pages
